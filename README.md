@@ -9,6 +9,6 @@
 5. update the configuration manager in src config
 6. update the components
 7. update the pipeline
-8. update the yaml.py
+8. update the dvc.yaml
 9. update the main.py
 10. update the app.py

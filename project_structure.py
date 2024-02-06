@@ -2,7 +2,7 @@ from pathlib import Path
 import logging
 import os
 
-PROJECT_NAME = "airline-passenger-satisfaction"
+PROJECT_NAME = "airline_passenger_satisfaction"
 
 file_paths = [
     ".github/workflows/main.yaml",
