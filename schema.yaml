@@ -1,1 +1,28 @@
-key: val
+COLUMNS:
+  ID: int64
+  Gender: object
+  Age: int64
+  Customer Type: object
+  Type of Travel: object
+  Class: object
+  Flight Distance: int64
+  Departure Delay: int64
+  Arrival Delay: float64
+  Departure and Arrival Time Convenience: int64
+  Ease of Online Booking: int64
+  Check-in Service: int64
+  Online Boarding: int64
+  Gate Location: int64
+  On-board Service: int64
+  Seat Comfort: int64
+  Leg Room Service: int64 
+  Cleanliness: int64
+  Food and Drink: int64
+  In-flight Service: int64
+  In-flight Wifi Service: int64
+  In-flight Entertainment: int64
+  Baggage Handling: int64
+  Satisfaction: object
+       
+TARGET_COLUMN:
+  name: Satisfaction
