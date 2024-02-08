@@ -82,10 +82,13 @@ class DataTransformation:
     
     def train_test_spliting(self):
         train, test = train_test_split(self.data, test_size=0.25, random_state=42)
+        train, valid = train_test_split(self.data, test_size=0.20, random_state=42)
 
         train.to_csv(os.path.join(self.config.root_dir, "train.csv"), index=False)
         test.to_csv(os.path.join(self.config.root_dir, "test.csv"), index=False)
+        valid.to_csv(os.path.join(self.config.root_dir, "valid.csv"), index=False)
 
-        logger.info("Spliting dataset into training and testing")
-        logger.info(f"Train dataset shape : {train.shape}")
-        logger.info(f"Test dataset shape : {test.shape}")
+        logger.info("Spliting Dataset into training, testing and validate sets")
+        logger.info(f"Train Dataset shape : {train.shape}")
+        logger.info(f"Test Dataset shape : {test.shape}")
+        logger.info(f"valid Dataset shape : {valid.shape}")
