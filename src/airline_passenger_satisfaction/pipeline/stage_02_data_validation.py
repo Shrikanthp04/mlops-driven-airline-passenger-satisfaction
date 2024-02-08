@@ -1,6 +1,4 @@
-
-
-
+import sys
 from airline_passenger_satisfaction.logger import logger
 from airline_passenger_satisfaction.components.data_validation import DataValidation
 from airline_passenger_satisfaction.config.configuration import ConfigurationManager
