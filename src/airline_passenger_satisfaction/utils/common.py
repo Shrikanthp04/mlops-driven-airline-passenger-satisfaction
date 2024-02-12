@@ -1,15 +1,14 @@
 import os
 import sys
-from src.airline_passenger_satisfaction.exception import CustomException
-import yaml
-from src.airline_passenger_satisfaction.logger import logger
 import json
+import yaml
 import joblib
-from ensure import ensure_annotations
-from box import ConfigBox
-from pathlib import Path
 from typing import Any
-
+from pathlib import Path
+from box import ConfigBox
+from ensure import ensure_annotations
+from src.airline_passenger_satisfaction.logger import logger
+from src.airline_passenger_satisfaction.exception import CustomException
 
 @ensure_annotations
 def read_yaml(path_to_yaml:Path)-> ConfigBox:
