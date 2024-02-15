@@ -48,39 +48,3 @@ Now,
 ```bash
 open up you local host and port
 ```
-
-
-
-## MLflow
-
-[Documentation](https://mlflow.org/docs/latest/index.html)
-
-
-##### cmd
-- mlflow ui
-
-### dagshub
-[dagshub](https://dagshub.com/)
-
-MLFLOW_TRACKING_URI=https://dagshub.com/Shrikanthp04/mlops-driven-airline-passenger-satisfaction.mlflow \
-MLFLOW_TRACKING_USERNAME=Shrikanthp04 \
-MLFLOW_TRACKING_PASSWORD=271b57f7e54d3a30da05ccc8658547a1f2188b2d \
-python script.py
-
-Run this to export as env variables:
-
-```bash
-
-export MLFLOW_TRACKING_URI=https://dagshub.com/Shrikanthp04/mlops-driven-airline-passenger-satisfaction.mlflow
-
-export MLFLOW_TRACKING_USERNAME=Shrikanthp04
-
-export MLFLOW_TRACKING_PASSWORD=271b57f7e54d3a30da05ccc8658547a1f2188b2d
-
-```
-## About MLflow 
-MLflow
-
- - Its Production Grade
- - Trace all of your expriements
- - Logging & tagging your model
