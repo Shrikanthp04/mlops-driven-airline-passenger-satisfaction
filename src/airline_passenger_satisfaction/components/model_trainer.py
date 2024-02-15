@@ -38,7 +38,7 @@ class ModelTrainer:
             "Random Forest Classifier": RandomForestClassifier(),
             "Xgboost Classifier": XGBClassifier(),
             "Adaboost Classifier": AdaBoostClassifier(),
-            "Gradient Boosting Blassifier": GradientBoostingClassifier(),
+            "Gradient Boosting Classifier": GradientBoostingClassifier(),
             "Lightgbm": lgb.LGBMClassifier()
         }
 

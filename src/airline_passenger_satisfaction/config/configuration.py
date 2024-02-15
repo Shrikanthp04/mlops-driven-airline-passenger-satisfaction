@@ -1,5 +1,5 @@
 from src.airline_passenger_satisfaction.utils.common import read_yaml, create_directories
-from airline_passenger_satisfaction.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig, ModelTrainerConfig
+from airline_passenger_satisfaction.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig, ModelEvaluationConfig, ModelTrainerConfig
 from src.airline_passenger_satisfaction.constants import *
 
 class ConfigurationManager:
@@ -70,3 +70,22 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    
+    def get_model_evaluation(self)-> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        params = self.params
+        schema = self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir= config.root_dir,
+            test_data_path= config.test_data_path,
+            valid_data_path= config.valid_data_path,
+            models_path= config.models_path,
+            best_model_path= config.best_model_path,
+            target_column= schema.name,
+            metrics_file_name= config.metric_file_name,
+        ) 
+
+        return model_evaluation_config

@@ -9,6 +9,7 @@ from box import ConfigBox
 from ensure import ensure_annotations
 from src.airline_passenger_satisfaction.logger import logger
 from src.airline_passenger_satisfaction.exception import CustomException
+from sklearn.metrics import precision_score, recall_score, roc_auc_score, accuracy_score
 
 @ensure_annotations
 def read_yaml(path_to_yaml:Path)-> ConfigBox:
@@ -62,3 +63,11 @@ def load_bin(path: Path)-> Any:
 def get_size(path: Path) ->str:
     size_in_kb = round(os.path.getsize(path)/1024)
     return f"{size_in_kb} KB" 
+
+def model_evaluation(y_true, y_pred):
+    precision = precision_score(y_true, y_pred)
+    recall = recall_score(y_true, y_pred)
+    acc_score = accuracy_score(y_true, y_pred)
+    roc_auc = roc_auc_score(y_true, y_pred)
+        
+    return precision, recall, roc_auc, acc_score

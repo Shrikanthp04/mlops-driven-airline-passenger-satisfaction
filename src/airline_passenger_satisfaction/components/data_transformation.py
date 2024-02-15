@@ -81,8 +81,8 @@ class DataTransformation:
             logger.warning(f"Target column '{self.target_column}' not found in the DataFrame.")
     
     def train_test_spliting(self):
-        train, test = train_test_split(self.data, test_size=0.25, random_state=42)
-        train, valid = train_test_split(self.data, test_size=0.20, random_state=42)
+        train, test = train_test_split(self.data, test_size=0.3, random_state=42)
+        train, valid = train_test_split(train, test_size=0.25, random_state=42)
 
         train.to_csv(os.path.join(self.config.root_dir, "train.csv"), index=False)
         test.to_csv(os.path.join(self.config.root_dir, "test.csv"), index=False)
