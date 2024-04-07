@@ -1,4 +1,8 @@
 # mlops-driven-airline-passenger-satisfaction
+This repository serves as a practice exercise for implementing MLOps workflows and modular coding practices, including the folder structure. Please note that deployment on AWS is not fully developed in this project. Additionally, it's important to mention that this is not a fully MLOps-driven project.
+
+Purpose
+The primary aim of this project is to demonstrate MLOps practices and modular coding techniques in the context of improving airline passenger satisfaction.
 
 ## Project Workflow
 
